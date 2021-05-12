@@ -1,0 +1,6 @@
+div.title{
+  background-color: #817b7b;
+  display:flexbox;
+  align-items: center;
+  padding: 50px;
+}
