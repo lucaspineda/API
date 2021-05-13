@@ -1,4 +1,8 @@
 import React from 'react';
+import {
+    BrowserRouter as Router,
+    Link
+  } from "react-router-dom";
 
 import './Api.css'
 
@@ -7,7 +11,7 @@ export default class List extends React.Component {
         linguagens: []
     };
 
-    componentDidMount() {
+    componentDidMount(props) {
         fetch('https://jsonplaceholder.typicode.com/posts')
             .then(res => res.json())
             .then(res => {
@@ -17,17 +21,16 @@ export default class List extends React.Component {
             });
     }
 
-    render() {
+    render(props) {
         return (
             <div>
                 <h1>Listagem</h1>
                 <ul className = "style">
                     {this.state.linguagens.map(item => (
-                        <li key={item.id}>
+                        <li id="URL" key={item.id}>
+                            <Link to={`/posts/${item.id}`}>ID:{item.id}</Link>
                             
-                            <p><b>userId:</b> a{item.userId}</p>
-
-                            <p><b>Número da notícia:</b> {item.id}</p>
+                            <p><b>UserId:</b> a{item.userId}</p>
 
                             <p><b>Titúlo:</b> {item.title}</p>
                             
