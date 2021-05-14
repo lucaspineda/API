@@ -1,2 +1,11 @@
-Para inicializar esse projeto você ira precisar do node.js e do pacote Yarn Start.
-Após o pacote instalado você precisara entrar no node.js selecionar a pasta  no qual foi salvo o aquivo e startar a mesma com yarn start.
+#API React
+
+Projeto desenvolvido com o framework React para listagem de post da api json placeholder https://jsonplaceholder.typicode.com/posts.
+
+## Instruções para a inicialização:
+
+# Para instalar as dependências use :
+# npm install --global yarn
+
+# Para rodar no localhost:3000:
+$ Use yarn start
